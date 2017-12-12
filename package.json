@@ -1,0 +1,28 @@
+{
+  "name": "generator-simple-java",
+  "version": "0.0.0",
+  "description": "A super simple playground generator for Yeoman",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/xremix/generator-simple-java",
+  "author": "Toni Hoffmann (https://github.com/xremix)",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xremix/generator-simple-java.git"
+  },
+  "scripts": {},
+  "dependencies": {
+    "yeoman-generator": "^2.0.1"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/xremix/generator-simple-java/issues"
+  },
+  "license": "MIT"
+}
