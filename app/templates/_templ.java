@@ -1,14 +1,15 @@
+// <%= className %>
 // import java.util.ArrayList;
 // import java.util.Scanner;
 
-class ExceptionHandling{
-	public ExceptionHandling(){
-		System.out.println("ExceptionHandling");
+class <%= className %>{
+	public <%= className %>(){
+		System.out.println("<%= className %>");
 	}
 }
 
-public class ExceptionHandlingAufgabe{
+public class <%= className %>Excercise{
 	public static void main(String[] args){
-		ExceptionHandling a = new ExceptionHandling();
+		<%= className %> a = new <%= className %>();
 	}
 }

@@ -12,19 +12,21 @@ module.exports = class extends Generator{
 
 		var prompts = [{
 			type    : 'input',
-			name    : 'sourceFilename',
+			name    : 'className',
 			message : 'Classname',
 			default : 'MyClass'
 		}];
 		return this.prompt(prompts).then((answer)=>{
-			this.sourceFilename = answer.sourceFilename+'.java';
+			this.className = answer.className+'Excercise.java';
 			done();
 		});
 	}
 	writing () {
 		this.fs.copyTpl(
 			this.templatePath('_templ.java'),
-			this.destinationPath(this.sourceFilename)
+			this.destinationPath(this.className),{
+				className: this.className
+			}
 		);
 	}
 };
