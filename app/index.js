@@ -17,27 +17,27 @@ module.exports = class extends Generator{
 			default : 'MyClass'
 		},{
 			type	: 'checkbox',
-			name	: 'excercise',
-			message : 'Do you want to add a exercise class?',
+			name	: 'includeTest',
+			message : 'Do you want to add a test class in the same file?',
 			store	: true,
 			choices:[{
-				name: 'Include exercise',
-				value: 'includeExercise',
+				name: 'Include Test Class',
+				value: 'includeTestClass',
 				checked: true
 			}]
 		}];
 		return this.prompt(prompts).then((answer)=>{
 			this.className = answer.className;
-			this.includeExercise = answer.excercise && answer.excercise.indexOf('includeExercise') !== -1;
+			this.includeTestClass = answer.includeTest && answer.includeTest.indexOf('includeTestClass') !== -1;
 			done();
 		});
 	}
 	writing () {
 		this.fs.copyTpl(
 			this.templatePath('_templ.java'),
-			this.destinationPath(this.className+ (this.includeExercise ? 'Excercise.java' : '.java')),{
+			this.destinationPath(this.className+ (this.includeTestClass ? 'Test.java' : '.java')),{
 				className: this.className,
-				includeExercise: this.includeExercise
+				includeTestClass: this.includeTestClass
 			}
 		);
 	}

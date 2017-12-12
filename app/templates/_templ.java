@@ -5,15 +5,14 @@
 class <%= className %>{
 	public <%= className %>(){
 		System.out.println("<%= className %>");
-	}
-	<% if(!includeExercise) { %>
+	}<% if(!includeTestClass) { %>
 	public static void main(String[] args){
 		<%= className %> a = new <%= className %>();
 	}
 	<% } %>
 }
-<% if(includeExercise) { %>
-public class <%= className %>Excercise{
+<% if(includeTestClass) { %>
+public class <%= className %>Test{
 	public static void main(String[] args){
 		<%= className %> a = new <%= className %>();
 	}
