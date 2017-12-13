@@ -1,5 +1,5 @@
 // 
-// Klasse: MyClass
+// Class: MyClass
 // 
 // import java.util.ArrayList;
 // import java.util.Scanner;

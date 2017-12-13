@@ -1,5 +1,5 @@
 // 
-// Klasse: <%= className %>
+// Class: <%= className %>
 // 
 // import java.util.ArrayList;
 // import java.util.Scanner;
